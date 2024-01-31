@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 from decouple import config
 
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY='%ny6uvb^!qewr0t+pc3fzjadxxauy!drgjh$ytkr@^ak8x5d!&'
 
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = False
 
 ALLOWED_HOSTS = ["vurudi100.pythonanywhere.com", "frontend-tau-rust-49.vercel.app"]
 
@@ -100,7 +100,7 @@ MIDDLEWARE = [
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    'https://frontend-tau-rust-49.vercel.app',
+    'https://frontend-tau-rust-49.vercel.app'
 ]
 
 ROOT_URLCONF = 'chat_api.urls'
@@ -166,10 +166,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static'
+
+
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+STATIC_ROOT = 'staticfiles'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media'
